@@ -1,0 +1,24 @@
+<html><meta charset="utf-8">
+<body bgcolor="#FFCD38" text="#541690">
+    <center><table border="0">
+    <form id = 'form'>
+        商品名稱:<input id = "name"></input><p>
+        商品價格:<input id = "price"></input><p>
+        最大數量:<input id = "MaxQ"></input><p>
+        訂購數量:<input id = "Q"></input><p>
+        <input type="button" value="送出" onclick="location.href='neworder_sql.php?'+AddData();">
+        <p>
+        <a href="shop.php">回到首頁</a><p>
+    </form>
+    <script>
+        function AddData() {
+            const formElement = document.getElementById("form");
+            const name = formElement[0].value;
+            const price = formElement[1].value;
+            const MaxQ = formElement[2].value;
+            const Q = formElement[3].value;
+            return 'name='+name+'&price='+price+'&MaxQ='+MaxQ+'&Q='+Q;
+        }
+    </script>
+    <body>
+<html>
